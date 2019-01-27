@@ -1,0 +1,35 @@
+<link rel= "stylesheet" href="style.css">
+
+<!DOCTYPE html>
+    <form action="/signup" method="POST">
+    <h1><center>User Signup</center></h1> 
+    <style> 
+    body {background-color: lightgray;} 
+    </style>
+    <div class="box">
+      <label for="username">Username: </label>
+      <span class="error">{{username_error}}</span><br> 
+      <div class="other-box">
+      <input type="text" name="username" value=""><br>
+      <label for="username">Password: </label>
+      <span class="error">{{password_error}}</span><br>
+      <div class="other-box"></div>
+      <input type="password" name="password" value=""><br>
+      <label for="username">Verify Password: </label>
+      <span class="error">{{password_conf_error}}</span><br>
+      <div class="other-box"></div>
+      <input type="password" name="password_conf" value=""><br>
+      <label for="username">Email (Optional): </label>
+      <span class="error">{{email_error}}</span><br>
+      <div class="other-box"></div>
+      <input type="text" name="email" value=""><br>
+      <div class="other-box"></div>
+      <input type="submit" value="Submit"><br>
+  </form>
+  <footer>
+    <small>&copy; 2019 Will Farrell</small>
+  </footer>
+
+
+
+
