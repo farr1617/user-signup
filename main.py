@@ -26,20 +26,21 @@ def validation():
     if is_blank(username):
         username_error = 'Not a valid username'
         username = ''
-    else:
-        if len(username) > 20 or len(username) < 3:
+    if len(username) > 20 or len(username) < 3:
             username_error = 'Username out of range (3-20 characters)'
             username = ''
-    if is_blank(password):
+
+    if is_blank(password and password_conf):
         password_error = 'Please enter a password'
         password = ''
-    else:
-        if len(password) > 20 or len(password) < 3:
+    if len(password and password_conf) > 20 or len(password and password_conf) < 3:
             password_error = 'Password out of range (3-20 characters)'
             password = ''
     if password_conf != password:
-        password_conf_error = 'Password Must match!'
-        password_conf = ''
+            password_conf_error = 'Password Must match!'
+            password_conf = ''
+        
+           
     if email:
         if email.count("@") < 1 or email.count("@") > 1:
             email_error = 'Please enter a valid email!'
